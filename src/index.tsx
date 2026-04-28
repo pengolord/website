@@ -2,12 +2,13 @@
 import { render } from 'solid-js/web';
 import 'solid-devtools';
 
+import App from './App';
 import './index.scss';
 
 const root = document.getElementById('root');
 render(
-  () => <main>
-    <h1>Hello!!</h1>
-  </main>,
+  () => <>
+    <App />
+  </>,
   root!
 );
