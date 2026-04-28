@@ -5,7 +5,7 @@ import { Component, lazy } from "solid-js";
   Glob for every file in the ./routes directory.
   This gives me access to everything there so I can import it later.
 */
-const modules = import.meta.glob('./routes/**/*.tsx') as Record<
+const modules = import.meta.glob('./routes/**/*.{md,mdx,tsx}') as Record<
   string,
   () => Promise<{ default: Component }>
 >;

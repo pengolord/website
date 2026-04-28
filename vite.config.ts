@@ -1,16 +1,24 @@
 import { defineConfig } from 'vite';
-import solidPlugin from 'vite-plugin-solid';
+import solid from 'vite-plugin-solid';
 import devtools from 'solid-devtools/vite';
+import mdx from "@mdx-js/rollup";
 
 export default defineConfig({
   plugins: [
     devtools(),
-    solidPlugin(),
+    solid(),
+    mdx({
+      jsxImportSource: 'solid-js',
+    }),
   ],
   server: {
     port: 5173,
   },
   build: {
     target: 'esnext',
+  },
+  resolve: {
+    // allow importing .mdx files without specifying extension
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.mdx'],
   },
 });

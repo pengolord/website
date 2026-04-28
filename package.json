@@ -12,6 +12,7 @@
     "serve": "vite preview"
   },
   "devDependencies": {
+    "@mdx-js/rollup": "^3.1.1",
     "sass": "^1.99.0",
     "solid-devtools": "^0.34.5",
     "typescript": "^6.0.3",
@@ -19,6 +20,7 @@
     "vite-plugin-solid": "^2.11.12"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^3.1.1",
     "@solidjs/router": "^0.16.1",
     "solid-js": "^1.9.12"
   }
