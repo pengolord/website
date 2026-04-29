@@ -1,0 +1,22 @@
+$text-primary: #e7def4;
+$text-secondary: #dfc5f9;
+
+#root {
+  background-color: #20182d;
+}
+
+main {
+  background-color: #302640;
+  color: $text-primary;
+}
+
+h5 {
+  color: $text-secondary;
+}
+
+a {
+  color: $text-secondary;
+  &:hover {
+    color: $text-primary;
+  }
+}
