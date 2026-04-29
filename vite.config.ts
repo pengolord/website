@@ -8,7 +8,7 @@ export default defineConfig({
     devtools(),
     solid(),
     mdx({
-      jsxImportSource: 'solid-js',
+      jsxImportSource: 'solid-js/h',
     }),
   ],
   server: {
