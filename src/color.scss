@@ -1,16 +1,18 @@
+$bg-primary: #302640;
+$fg-primary: #20182d;
 $text-primary: #e7def4;
 $text-secondary: #dfc5f9;
 
 #root {
-  background-color: #20182d;
+  background-color: $bg-primary;
 }
 
 main {
-  background-color: #302640;
+  background-color: $fg-primary;
   color: $text-primary;
 }
 
-h5 {
+h5, hr {
   color: $text-secondary;
 }
 
