@@ -6,7 +6,7 @@ const Header: Component = () => {
   return (
     <header class={styles.Header}>
       <nav>
-        <A href='/'>
+        <A href='/' activeClass={styles.active} end={true}>
           {
             // Font Awesome Free v7.2.0 by @fontawesome
             // https://fontawesome.com License - https://fontawesome.com/license/free
@@ -17,7 +17,7 @@ const Header: Component = () => {
           </svg>
         </A>
         <ul>
-          <li><A href='/projects' >Projects</A></li>
+          <li><A href='/projects' activeClass={styles.active}>Projects</A></li>
           <li><A href='/' >???</A></li>
           <li><A href='/' >???</A></li>
         </ul>

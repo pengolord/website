@@ -1,6 +1,6 @@
 @use '../color';
 
-Header {
+.Header {
   background-color: color.$fg-primary;
   border-bottom: 4px solid color.$bg-primary;
   z-index: 1;
@@ -27,8 +27,17 @@ Header {
     align-items: center;
     list-style-type: none;
 
-    * {
+    li, a {
+      display: flex;
+      align-items: center;
       text-align: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
     }
   }
+}
+
+.active {
+  background-color: color.$bg-primary;
 }
