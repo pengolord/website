@@ -1,5 +1,7 @@
 import { Router } from "@solidjs/router";
-import { Component, lazy } from "solid-js";
+import { Component, lazy, ParentComponent } from "solid-js";
+
+import Header from './components/Header';
 
 /*
   Glob for every file in the ./routes directory.
@@ -29,9 +31,20 @@ const routes = Object.keys(modules).map((file) => {
   };
 });
 
+const Layout: ParentComponent = (props) => {
+  return (
+    <>
+      <Header />
+      <main>
+        {props.children}
+      </main>
+    </>
+  );
+}
+
 const App: Component = () => {
   return (
-    <Router>
+    <Router root={Layout}>
       {routes}
     </Router>
   );
