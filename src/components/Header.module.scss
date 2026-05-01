@@ -1,47 +1,69 @@
 @use '../color';
 
-.Header {
-  background-color: color.$fg-primary;
-  border-bottom: 4px solid color.$bg-primary;
-  z-index: 1;
-  font-family: sans-serif;
+.header {
+  display: flex;
 
   nav {
     display: flex;
-    justify-content: center;
 
-    * {
-      flex: 1;
-    }
+    justify-content: space-between;
+    gap: 1rem;
+
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  .circle, .long-circle {
+    display: flex;
+
+    padding: 0.5rem;
+
+    background-color: color.$fg-primary;
+    border: 2px solid color.$text-primary;
+    border-radius: 1rem;
+  }
+
+  .circle {
+    aspect-ratio: 1 / 1;
+  }
+
+  .long-circle {
+    flex: 1;
+
+    justify-content: space-around;
   }
 
   svg {
-    width: 3rem;
+    min-width: 2rem;
+    min-height: 2rem;
+
+    fill: color.$text-secondary;
+
+    transition: transform .3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .svg-active svg {
     fill: color.$text-primary;
-    padding: .5rem;
   }
 
   ul {
     padding: 0;
-    display: flex;
-    align-items: center;
+
     list-style-type: none;
 
-    li, a {
+    li {
       display: flex;
-      align-items: center;
-      text-align: center;
+
       justify-content: center;
-      height: 100%;
-      width: 100%;
+      align-items: center;
     }
   }
-}
 
-.active {
-  background-color: color.$bg-primary;
-}
-
-.activeParent svg {
-  background-color: color.$bg-primary;
+  a.active {
+    background-color: color.$bg-primary;
+  }
 }
