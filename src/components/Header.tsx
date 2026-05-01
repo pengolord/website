@@ -6,7 +6,7 @@ const Header: Component = () => {
   return (
     <header class={styles.Header}>
       <nav>
-        <A href='/' activeClass={styles.active} end={true}>
+        <A href='/' activeClass={styles.activeParent} end={true}>
           {
             // Font Awesome Free v7.2.0 by @fontawesome
             // https://fontawesome.com License - https://fontawesome.com/license/free

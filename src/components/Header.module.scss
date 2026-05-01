@@ -16,9 +16,9 @@
   }
 
   svg {
-    width: 2rem;
+    width: 3rem;
     fill: color.$text-primary;
-    margin: .5rem;
+    padding: .5rem;
   }
 
   ul {
@@ -39,5 +39,9 @@
 }
 
 .active {
+  background-color: color.$bg-primary;
+}
+
+.activeParent svg {
   background-color: color.$bg-primary;
 }
