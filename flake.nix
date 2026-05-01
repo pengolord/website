@@ -7,12 +7,10 @@
 		systems = [ "x86_64-linux" "aarch64-linux" ];
 
 		forEachSystem = perSystem:
-			lib.genAttrs systems perSystem;
+			lib.genAttrs systems (system: perSystem inputs.nixpkgs.legacyPackages.${system});
 	in {
-		devShells = forEachSystem (system: {
-			default = let
-				pkgs = inputs.nixpkgs.legacyPackages.${system};
-			in pkgs.mkShell {
+		devShells = forEachSystem (pkgs: {
+			default = pkgs.mkShell {
 				buildInputs = with pkgs; [
 					bun
 				];
