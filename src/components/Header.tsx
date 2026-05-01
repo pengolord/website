@@ -1,7 +1,6 @@
 import { Component } from "solid-js";
 import { A } from '@solidjs/router';
 import styles from './Header.module.scss';
-import { style } from "solid-js/web";
 
 const Header: Component = () => {
   return (
