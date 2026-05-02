@@ -5,18 +5,19 @@
   This file is used for site-wide defaults.
   Individual pages can have different setups.
 */
-
 html, body, #root {
   display: flex;
+
   flex-direction: column;
   min-height: 100vh;
   overscroll-behavior: none;
 }
 
 main {
+  max-width: 100%;
   width: calc(12vw + 35rem);
   padding: 1rem 2rem;
-  margin: auto;
+  margin: 0 auto;
   flex: 1;
 
   h1, h2, h3, h4, h5, h6 {
