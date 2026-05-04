@@ -1,24 +1,32 @@
 @use './reset';
-@use './color';
+@use './colors';
 
 /*
-  This file is used for site-wide defaults.
-  Individual pages can have different setups.
+  This file holds the site-wide defaults for stuff.
+  It's applied to the whole page.
 */
+
 html, body, #root {
   display: flex;
 
   flex-direction: column;
   min-height: 100vh;
   overscroll-behavior: none;
+
+  background-color: colors.$surface-primary;
 }
 
 main {
-  max-width: 100%;
+  flex: 1;
+
   width: calc(12vw + 35rem);
+  max-width: 100%;
+
   padding: 1rem 2rem;
   margin: 0 auto;
-  flex: 1;
+
+  color: colors.$on-surface-primary;
+  background-color: colors.$surface-primary-dim;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
@@ -43,14 +51,26 @@ main {
   h5 {
     font-size: 1rem;
     margin-bottom: 2rem;
+
+    color: colors.$on-surface-primary-bright;
   }
 
   hr {
     margin-bottom: 1rem;
+
+    color: colors.$on-surface-primary-bright;
   }
 
   ul, p {
     font-family: serif;
     margin-bottom: 1rem;
+  }
+
+  a {
+    color: colors.$on-surface-primary-bright;
+
+    &:hover {
+      color: colors.$on-surface-primary-dim;
+    }
   }
 }

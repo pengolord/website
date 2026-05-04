@@ -1,4 +1,4 @@
-@use '../color';
+@use '../colors';
 
 .header {
   display: flex;
@@ -20,8 +20,8 @@
 
     padding: 0.5rem;
 
-    background-color: color.$fg-primary;
-    border: 2px solid color.$text-primary;
+    background-color: colors.$surface-primary-dim;
+    border: 2px solid colors.$on-surface-primary-bright;
     border-radius: 1rem;
   }
 
@@ -39,7 +39,7 @@
     min-width: 2rem;
     min-height: 2rem;
 
-    fill: color.$text-secondary;
+    fill: colors.$on-surface-primary-dim;
 
     transition: transform .3s ease;
 
@@ -49,7 +49,7 @@
   }
 
   .svg-active svg {
-    fill: color.$text-primary;
+    fill: colors.$on-surface-primary-bright;
   }
 
   ul {
@@ -66,11 +66,17 @@
       a {
         padding: 0.1rem;
         border-radius: .5rem;
+
+        color: colors.$on-surface-primary-bright;
+
+        &:hover {
+          color: colors.$on-surface-primary-dim;
+        }
       }
     }
   }
 
   a.active {
-    background-color: color.$bg-primary;
+    background-color: colors.$surface-primary;
   }
 }
