@@ -23,10 +23,12 @@ main {
   max-width: 100%;
 
   padding: 1rem 2rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
 
   color: colors.$on-surface-primary;
   background-color: colors.$surface-primary-dim;
+  border: 2px solid colors.$on-surface-primary-bright;
+  border-radius: 1rem;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;

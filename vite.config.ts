@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import solid from 'vite-plugin-solid';
 import devtools from 'solid-devtools/vite';
 import mdx from "@mdx-js/rollup";
+import githubFlavoredMarkdown from 'remark-gfm';
 
 export default defineConfig({
   plugins: [
@@ -9,6 +10,7 @@ export default defineConfig({
     solid(),
     mdx({
       jsxImportSource: 'solid-js/h',
+      remarkPlugins: [githubFlavoredMarkdown],
     }),
   ],
   server: {
