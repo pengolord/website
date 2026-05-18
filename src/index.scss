@@ -13,7 +13,7 @@ html, body, #root {
   min-height: 100vh;
   overscroll-behavior: none;
 
-  background-color: colors.$surface-primary;
+  background-color: colors.$surface-primary-bright;
 }
 
 main {
@@ -26,7 +26,7 @@ main {
   margin: 0 auto 1rem auto;
 
   color: colors.$on-surface-primary;
-  background-color: colors.$surface-primary-dim;
+  background-color: colors.$surface-primary;
   border: 2px solid colors.$on-surface-primary-bright;
   border-radius: 1rem;
 

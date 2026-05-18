@@ -1,0 +1,51 @@
+@use '../../colors';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1rem;
+
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  background-color: colors.$surface-primary;
+  border: 2px solid colors.$on-surface-primary-bright;
+  border-radius: 1rem;
+
+  * {
+    margin: 0
+  }
+
+  .title {
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+
+    padding: 0;
+    margin-bottom: 0.5rem;
+
+    list-style-type: none;
+
+    li {
+      padding: 0.25rem;
+
+      color: colors.$on-surface-primary-bright;
+      background-color: colors.$surface-primary-dim;
+      border-radius: .5rem;
+    }
+  }
+
+  h4 {
+    color: colors.$on-surface-primary-dim;
+  }
+}

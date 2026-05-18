@@ -20,7 +20,7 @@
 
     padding: 0.5rem;
 
-    background-color: colors.$surface-primary-dim;
+    background-color: colors.$surface-primary;
     border: 2px solid colors.$on-surface-primary-bright;
     border-radius: 1rem;
   }
@@ -39,7 +39,7 @@
     min-width: 2rem;
     min-height: 2rem;
 
-    fill: colors.$on-surface-primary-dim;
+    fill: colors.$on-surface-primary;
 
     transition: transform .3s ease;
 
