@@ -11,10 +11,18 @@
 	in {
 		devShells = forEachSystem (pkgs: {
 			default = pkgs.mkShell {
-				buildInputs = with pkgs; [
-					bun
-				];
-			};
+        buildInputs = [
+          pkgs.nodejs
+          pkgs.pnpm
+        ];
+      };
 		});
+
+    packages = forEachSystem (pkgs: let
+      site = pkgs.callPackage ./package.nix {};
+    in {
+      default = site;
+      inherit site;
+    });
 	};
 }
