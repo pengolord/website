@@ -1,5 +1,5 @@
 {
-	inputs.nixpkgs.url = "nixpkgs";
+	inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
 	outputs = inputs: let
 		inherit (inputs.nixpkgs) lib;
