@@ -18,7 +18,7 @@ const Header: Component = () => {
         <ul class={styles['long-circle']}>
           <li><A href='/projects' activeClass={styles['active']}>Projects</A></li>
           <li><A href='/blog' activeClass={styles['active']}>Blog</A></li>
-          <li><A href='/projects' activeClass={styles['active']}>Projects</A></li>
+          <li><A href='https://git.pengo.uk' activeClass={styles['active']}>Forge</A></li>
         </ul>
       </nav>
     </header>
