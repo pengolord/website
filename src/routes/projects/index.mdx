@@ -1,17 +1,18 @@
-import styles from './projects.module.scss';
+import Card from './_Card';
 
 # My projects
 ##### A not-so-curated list of things I've made.
 
-<div class={styles.card}>
-  <div class={styles.title}>
-    ## [pengo.uk](https://git.pengo.uk/website)
-    #### This website!
-  </div>
-  <ul class={styles.tags}>
-    <li>web</li>
-    <li>typescript/javascript</li>
-  </ul>
-  A solidjs/vite project written (mostly) in typescript, scss, and mdx, with auto route generation.
-  god I hate webdev
-</div>
+<Card
+  title = 'pengo.uk'
+  link = 'https://git.pengo.uk/website'
+  subtitle = 'This website!'
+  tags = {[
+    'web',
+    'typescript/javascript',
+  ]}
+  description = '
+    A solidjs/vite project written (mostly) in typescript, scss, and mdx, with auto route generation.
+    god I hate webdev
+  '
+/>
