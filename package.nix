@@ -12,12 +12,12 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "pengo.uk";
   version = "0.1.0";
 
-  src = ./.;
+  src = lib.cleanSource ./.;
 
   pnpmDeps = fetchPnpmDeps {
     inherit (finalAttrs) pname version src;
     fetcherVersion = 3;
-    hash = "sha256-CnHXuV06X3AJQ95b4nJm82CEhzCu75V6uQt/cyOCWro=";
+    hash = "sha256-EaacwouNuiRjXNcBOg1549ldpMvWw2vM3PSUGKEQ2H8=";
   };
 
   nativeBuildInputs = [
